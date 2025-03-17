@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd /workspace/
 git clone git@github.com:comfyanonymous/ComfyUI.git
 cd /workspace/ComfyUI/custom_nodes
