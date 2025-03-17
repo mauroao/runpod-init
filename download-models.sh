@@ -1,6 +1,6 @@
 cd /workspace/ComfyUI/models/loras/
-wget "civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=fc8fa1dca114e0ec7ec3f71d0cc931a0" --content-disposition
-wget "civitai.com/api/download/models/1525363?type=Model&format=SafeTensor&token=fc8fa1dca114e0ec7ec3f71d0cc931a0" --content-disposition
+wget "civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RUN_POD_TOKEN}" --content-disposition
+wget "civitai.com/api/download/models/1525363?type=Model&format=SafeTensor&token=${RUN_POD_TOKEN}" --content-disposition
 
 cd /workspace/ComfyUI/models/text_encoders/
 wget -O umt5_xxl_fp8_e4m3fn_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true
