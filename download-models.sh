@@ -24,6 +24,7 @@ download_file() {
 cd /workspace/ComfyUI/models/loras/
 download_file "bounceV_01.safetensors" "civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file "wan_cumshot.safetensors" "civitai.com/api/download/models/1525363?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file "BouncyWalkV01.safetensors" "civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
