@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apt update && apt install aria2 -y
+
+
 # Check if the RP_TOKEN variable is set and not empty
 if [ -z "$RP_TOKEN" ]; then
     echo "Error: RP_TOKEN is not set. Aborting."
@@ -17,7 +20,7 @@ download_file() {
     fi
 
     echo "Downloading: $url"
-    wget -O "$target_path" "$url"
+    aria2c -x 16 -s 16 -o "$target_path" "$url"
 }
 
 # LoRAs directory
@@ -44,4 +47,3 @@ download_file "wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors" "https://huggingface.
 download_file "wan2.1_i2v_720p_14B_fp16.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp16.safetensors?download=true"
 
 echo "Download completed."
-
