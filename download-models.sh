@@ -2,14 +2,12 @@
 
 apt update && apt install aria2 -y
 
-
 # Check if the RP_TOKEN variable is set and not empty
 if [ -z "$RP_TOKEN" ]; then
     echo "Error: RP_TOKEN is not set. Aborting."
     exit 1
 fi
 
-# Function to download files, removing them first if they exist
 download_file() {
     local target_path=$1
     local url=$2
@@ -23,11 +21,24 @@ download_file() {
     aria2c -x 16 -s 16 -o "$target_path" "$url"
 }
 
+download_file_v2() {
+    local target_path=$1
+    local url=$2
+
+    if [ -f "$target_path" ]; then
+        echo "Removing existing file: $target_path"
+        rm "$target_path"
+    fi
+
+    echo "Downloading: $url"
+    wget -O "$target_path" "$url"
+}
+
 # LoRAs directory
 cd /workspace/ComfyUI/models/loras/
-download_file "bounceV_01.safetensors" "civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file "wan_cumshot.safetensors" "civitai.com/api/download/models/1525363?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file "BouncyWalkV01.safetensors" "civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "bounceV_01.safetensors" "civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_cumshot.safetensors" "civitai.com/api/download/models/1525363?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "BouncyWalkV01.safetensors" "civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
