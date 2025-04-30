@@ -2,14 +2,15 @@
 
 ## Copy files from server
 
-Example command to copy files from server to local machine:
+Copy files from server to local:
 ```
-scp -P 17351 -i "C:\Users\mauro\.ssh\id_rsa" -r "root@38.147.83.15:/workspace/ComfyUI/output/" "C:\Users\mauro\Downloads\"
+scp -P 51082 -i "C:\Users\mauro\.ssh\id_rsa" -r "root@195.26.233.92:/workspace/ComfyUI/output/" "C:\Users\mauro\Downloads\"
 ```
 
-Example command to copy files from local machine to server:
+Copy files from local to server:
 ```
 scp -P 17351 -i "C:\Users\mauro\.ssh\id_rsa" "E:\stable_diffusion\nsfw-ai-files\diffusion-pipe-training\poetry\*.*" "root@38.147.83.15:/workspace/diffusion-pipe/dataset/"
 ```
+
 
 
