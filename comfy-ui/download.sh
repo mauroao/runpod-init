@@ -43,11 +43,11 @@ download_file_v2 "wan_cumshot_i2v.safetensors" "https://civitai.com/api/download
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
-download_file "umt5_xxl_fp8_e4m3fn_scaled.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true"
+download_file "umt5-xxl-enc-fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-fp8_e4m3fn.safetensors?download=true"
 
 # VAE directory
 cd /workspace/ComfyUI/models/vae/
-download_file "wan_2.1_vae.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true"
+download_file "Wan2_1_VAE_bf16.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true"
 
 # CLIP Vision directory
 cd /workspace/ComfyUI/models/clip_vision/
@@ -55,7 +55,6 @@ download_file "clip_vision_h.safetensors" "https://huggingface.co/Comfy-Org/Wan_
 
 # Diffusion Models directory
 cd /workspace/ComfyUI/models/diffusion_models/
-download_file "wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors?download=true"
-download_file "wan2.1_i2v_720p_14B_fp16.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp16.safetensors?download=true"
+download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
 
 echo "Download completed."
