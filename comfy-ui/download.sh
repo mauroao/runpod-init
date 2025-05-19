@@ -57,4 +57,8 @@ download_file "clip_vision_h.safetensors" "https://huggingface.co/Comfy-Org/Wan_
 cd /workspace/ComfyUI/models/diffusion_models/
 download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
 
+# Upscaler Models directory
+cd /workspace/ComfyUI/models/upscale_models/
+download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x2.pth?download=true"
+
 echo "Download completed."
