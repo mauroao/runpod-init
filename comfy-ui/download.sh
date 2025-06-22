@@ -36,10 +36,10 @@ download_file_v2() {
 
 # LoRAs directory
 cd /workspace/ComfyUI/models/loras/
-download_file_v2 "bounceV_01.safetensors" "civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_cumshot.safetensors" "civitai.com/api/download/models/1525363?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "BouncyWalkV01.safetensors" "civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_bounceV_01.safetensors" "https://civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_big_breasts_v2_epoch_30.safetensors" "https://civitai.com/api/download/models/1776890?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_cumshot_i2v.safetensors" "https://civitai.com/api/download/models/1602715?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_BouncyWalkV01.safetensors" "https://civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
