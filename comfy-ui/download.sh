@@ -40,7 +40,7 @@ download_file_v2 "wan_bounceV_01.safetensors" "https://civitai.com/api/download/
 download_file_v2 "wan_big_breasts_v2_epoch_30.safetensors" "https://civitai.com/api/download/models/1776890?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_cumshot_i2v.safetensors" "https://civitai.com/api/download/models/1602715?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_BouncyWalkV01.safetensors" "https://civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_m4crom4sti4-40epo-k3nk.safetensors" "https://civitai.com/api/download/models/1924984?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_m4crom4sti4-i2v-106epo-k3nk.safetensors" "https://civitai.com/api/download/models/2022744?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_cumshot-I2V-22epo-k3nk.safetensors" "https://civitai.com/api/download/models/1952633?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_SECRET_SAUCE_WAN2.1_14B_fp8.safetensors" "https://civitai.com/api/download/models/1959008?type=Model&format=SafeTensor&size=full&fp=fp8&token=${RP_TOKEN}"
 
