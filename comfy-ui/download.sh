@@ -55,12 +55,11 @@ download_file "Wan2_1_VAE_bf16.safetensors" "https://huggingface.co/Kijai/WanVid
 # CLIP Vision directory
 cd /workspace/ComfyUI/models/clip_vision/
 download_file "clip_vision_h.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true"
+download_file "wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors" "https://huggingface.co/qpqpqpqpqpqp/basedbase_clip_h_wan_fp8/resolve/main/wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors?download=true"
 
 # Diffusion Models directory
 cd /workspace/ComfyUI/models/diffusion_models/
 download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
-download_file "wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors" "https://huggingface.co/qpqpqpqpqpqp/basedbase_clip_h_wan_fp8/resolve/main/wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors?download=true"
-
 
 # Upscaler Models directory
 cd /workspace/ComfyUI/models/upscale_models/
