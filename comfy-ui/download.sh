@@ -44,6 +44,8 @@ download_file_v2 "wan_m4crom4sti4-i2v-106epo-k3nk.safetensors" "https://civitai.
 download_file_v2 "wan_cumshot-I2V-22epo-k3nk.safetensors" "https://civitai.com/api/download/models/1952633?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_SECRET_SAUCE_WAN2.1_14B_fp8.safetensors" "https://civitai.com/api/download/models/1959008?type=Model&format=SafeTensor&size=full&fp=fp8&token=${RP_TOKEN}"
 download_file_v2 "wan_i2v_pov_blowjob_v1.2.safetensors" "https://civitai.com/api/download/models/2021249?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_Su_Bounce_Ep50.safetensors" "https://civitai.com/api/download/models/1872131?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
