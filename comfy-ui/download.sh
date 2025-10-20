@@ -50,7 +50,6 @@ download_file "wan_2.1_vae.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.
 # CLIP Vision directory
 cd /workspace/ComfyUI/models/clip_vision/
 download_file "clip_vision_h.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true"
-download_file "wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors" "https://huggingface.co/qpqpqpqpqpqp/basedbase_clip_h_wan_fp8/resolve/main/wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors?download=true"
 
 # Diffusion Models directory
 cd /workspace/ComfyUI/models/diffusion_models/
