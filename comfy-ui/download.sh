@@ -36,24 +36,16 @@ download_file_v2() {
 
 # LoRAs directory
 cd /workspace/ComfyUI/models/loras/
-download_file_v2 "wan_bounceV_01.safetensors" "https://civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_big_breasts_v2_epoch_30.safetensors" "https://civitai.com/api/download/models/1776890?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_cumshot_i2v.safetensors" "https://civitai.com/api/download/models/1602715?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_BouncyWalkV01.safetensors" "https://civitai.com/api/download/models/1537915?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_m4crom4sti4-i2v-106epo-k3nk.safetensors" "https://civitai.com/api/download/models/2022744?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_cumshot-I2V-22epo-k3nk.safetensors" "https://civitai.com/api/download/models/1952633?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_SECRET_SAUCE_WAN2.1_14B_fp8.safetensors" "https://civitai.com/api/download/models/1959008?type=Model&format=SafeTensor&size=full&fp=fp8&token=${RP_TOKEN}"
-download_file_v2 "wan_i2v_pov_blowjob_v1.2.safetensors" "https://civitai.com/api/download/models/2021249?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "wan_Su_Bounce_Ep50.safetensors" "https://civitai.com/api/download/models/1872131?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-
+download_file_v2 "wan22-m4crom4sti4-i2v-20epoc-high-k3nk.safetensors" "https://civitai.com/api/download/models/2265575?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan22-m4crom4sti4-i2v-20epoc-low-k3nk.safetensors" "https://civitai.com/api/download/models/2266727?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
-download_file "umt5-xxl-enc-fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-fp8_e4m3fn.safetensors?download=true"
+download_file "umt5_xxl_fp8_e4m3fn_scaled.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true"
 
 # VAE directory
 cd /workspace/ComfyUI/models/vae/
-download_file "Wan2_1_VAE_bf16.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true"
+download_file "wan_2.1_vae.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true"
 
 # CLIP Vision directory
 cd /workspace/ComfyUI/models/clip_vision/
@@ -62,10 +54,7 @@ download_file "wan21NSFWClipVisionH_v10_fp8_e4m3fn.safetensors" "https://hugging
 
 # Diffusion Models directory
 cd /workspace/ComfyUI/models/diffusion_models/
-download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
-
-# Upscaler Models directory
-cd /workspace/ComfyUI/models/upscale_models/
-download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x2.pth?download=true"
+download_file "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors?download=true"
+download_file "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors?download=true"
 
 echo "Download completed."
