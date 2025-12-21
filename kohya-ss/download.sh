@@ -35,22 +35,22 @@ download_file_v2() {
 }
 
 mkdir -p /workspace/models
-cd /workspace/models
-download_file_v2 "bigLove_xl1.safetensors" "https://civitai.com/api/download/models/1147588?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=${RP_TOKEN}"
 
-mkdir -p /workspace/reg
-cd /workspace/reg
-download_file_v2 "womanXLREGULARISATIONPHOTO_v50.zip" "https://civitai.com/api/download/models/305100?type=Archive&format=Other&token=${RP_TOKEN}"
+cd /workspace/
+download_file_v2 "file.zip" "https://github.com/mauroao/runpod-init/releases/download/filesv1/train_data.zip"
 
 # Unzip the archive and remove it if successful
-if [ -f "womanXLREGULARISATIONPHOTO_v50.zip" ]; then
-    echo "Unzipping womanXLREGULARISATIONPHOTO_v50.zip..."
-    if unzip -o "womanXLREGULARISATIONPHOTO_v50.zip"; then
+if [ -f "file.zip" ]; then
+    echo "Unzipping file.zip..."
+    if unzip -o "file.zip"; then
         echo "Successfully unzipped. Removing zip file..."
-        rm "womanXLREGULARISATIONPHOTO_v50.zip"
+        rm "file.zip"
     else
-        echo "Error: Failed to unzip womanXLREGULARISATIONPHOTO_v50.zip"
+        echo "Error: Failed to unzip file.zip"
     fi
 fi
+
+cd /workspace/models
+download_file_v2 "juggernautXL_ragnarokBy.safetensors" "https://civitai.com/api/download/models/1759168?type=Model&format=SafeTensor&size=full&fp=fp16&token=${RP_TOKEN}"
 
 echo "Download completed."
