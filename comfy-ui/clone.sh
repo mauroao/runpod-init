@@ -9,3 +9,4 @@ git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git comfyui-vi
 git clone https://github.com/kijai/ComfyUI-WanVideoWrapper.git comfyui-wanvideowrapper
 git clone https://github.com/kijai/ComfyUI-KJNodes.git comfyui-kjnodes
 git clone https://github.com/DoctorDiffusion/ComfyUI-MediaMixer.git comfyui-mediamixer
+git clone https://github.com/city96/ComfyUI-GGUF ComfyUI-GGUF
