@@ -61,8 +61,10 @@ download_file "clip_vision_h.safetensors" "https://huggingface.co/Comfy-Org/Wan_
 
 # Diffusion Models directory
 cd /workspace/ComfyUI/models/diffusion_models/
-download_file "Wan2.2-I2V-A14B-LowNoise-Q5_K_M.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/LowNoise/Wan2.2-I2V-A14B-LowNoise-Q5_K_M.gguf?download=true"
-download_file "Wan2.2-I2V-A14B-HighNoise-Q5_K_M.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/HighNoise/Wan2.2-I2V-A14B-HighNoise-Q5_K_M.gguf?download=true"
+# download_file "Wan2.2-I2V-A14B-LowNoise-Q5_K_M.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/LowNoise/Wan2.2-I2V-A14B-LowNoise-Q5_K_M.gguf?download=true"
+# download_file "Wan2.2-I2V-A14B-HighNoise-Q5_K_M.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/HighNoise/Wan2.2-I2V-A14B-HighNoise-Q5_K_M.gguf?download=true"
 
+download_file "Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/HighNoise/Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf?download=true"
+download_file "Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/LowNoise/Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf?download=true"
 
 echo "Download completed."
