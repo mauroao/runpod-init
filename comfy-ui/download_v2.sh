@@ -1,4 +1,7 @@
 #!/bin/bash
+set -euo pipefail
+
+trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
 apt update && apt install aria2 -y
 
@@ -13,8 +16,8 @@ download_file() {
     local url=$2
 
     if [ -f "$target_path" ]; then
-        echo "Removing existing file: $target_path"
-        rm "$target_path"
+        echo "Skipping: $target_path already exists."
+        return 0
     fi
 
     echo "Downloading: $url"
@@ -26,8 +29,8 @@ download_file_v2() {
     local url=$2
 
     if [ -f "$target_path" ]; then
-        echo "Removing existing file: $target_path"
-        rm "$target_path"
+        echo "Skipping: $target_path already exists."
+        return 0
     fi
 
     echo "Downloading: $url"
@@ -65,4 +68,5 @@ download_file "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors" "https://huggin
 download_file "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors"
 
 
-echo "Download completed."
+echo "All commands executed successfully."
+exit 0

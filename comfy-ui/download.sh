@@ -1,6 +1,7 @@
 #!/bin/bash
+set -euo pipefail
 
-apt update && apt install aria2 -y
+trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
 # Check if the RP_TOKEN variable is set and not empty
 if [ -z "$RP_TOKEN" ]; then
@@ -13,8 +14,8 @@ download_file() {
     local url=$2
 
     if [ -f "$target_path" ]; then
-        echo "Removing existing file: $target_path"
-        rm "$target_path"
+        echo "Skipping: $target_path already exists."
+        return 0
     fi
 
     echo "Downloading: $url"
@@ -26,8 +27,8 @@ download_file_v2() {
     local url=$2
 
     if [ -f "$target_path" ]; then
-        echo "Removing existing file: $target_path"
-        rm "$target_path"
+        echo "Skipping: $target_path already exists."
+        return 0
     fi
 
     echo "Downloading: $url"
@@ -44,8 +45,6 @@ download_file_v2 "wan22-m4crom4sti4-i2v-20epoc-high-k3nk.safetensors" "https://c
 download_file_v2 "wan22-m4crom4sti4-i2v-20epoc-low-k3nk.safetensors" "https://civitai.com/api/download/models/2266727?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan22-f4c3spl4sh-100epoc-high-k3nk.safetensors" "https://civitai.com/api/download/models/2176450?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan22-f4c3spl4sh-154epoc-low-k3nk.safetensors" "https://civitai.com/api/download/models/2178869?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-
-
 
 # Text Encoders directory
 cd /workspace/ComfyUI/models/text_encoders/
@@ -67,4 +66,5 @@ cd /workspace/ComfyUI/models/diffusion_models/
 download_file "Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/HighNoise/Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf?download=true"
 download_file "Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf" "https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF/resolve/main/LowNoise/Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf?download=true"
 
-echo "Download completed."
+echo "All commands executed successfully."
+exit 0
