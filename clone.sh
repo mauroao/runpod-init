@@ -20,5 +20,10 @@ git clone https://github.com/kijai/ComfyUI-KJNodes.git comfyui-kjnodes
 git clone https://github.com/DoctorDiffusion/ComfyUI-MediaMixer.git comfyui-mediamixer
 git clone https://github.com/city96/ComfyUI-GGUF ComfyUI-GGUF
 
+mkdir -p /workspace/ComfyUI/user/default/workflows
+for f in /workspace/runpod-init/workflows/*.json; do
+    ln -sf "$f" /workspace/ComfyUI/user/default/workflows/
+done
+
 echo "All commands executed successfully."
 exit 0
