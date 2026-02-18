@@ -5,7 +5,8 @@ download_base_models
 
 # Diffusion Model
 cd /workspace/ComfyUI/models/diffusion_models/
-download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
+# download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
+download_file "wan2.1-i2v-14b-720p-Q5_K_M.gguf" "https://huggingface.co/city96/Wan2.1-I2V-14B-720P-gguf/resolve/main/wan2.1-i2v-14b-720p-Q5_K_M.gguf?download=true"
 
 # LoRAs
 cd /workspace/ComfyUI/models/loras/
@@ -18,3 +19,5 @@ download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN
 
 echo "All downloads completed successfully."
 exit 0
+
+#
