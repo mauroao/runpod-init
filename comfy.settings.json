@@ -1,4 +1,5 @@
 {
     "Comfy.Minimap.Visible": false,
-    "Comfy.LinkRenderMode": 1
+    "Comfy.LinkRenderMode": 1,
+    "Comfy.RightSidePanel.IsOpen": false
 }
