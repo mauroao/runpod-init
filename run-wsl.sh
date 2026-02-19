@@ -14,4 +14,4 @@ print('[startup] Triton pre-warm OK')
 " || echo "[startup] AVISO: Triton pre-warm falhou. SageAttention pode nao funcionar."
 
 cd /workspace/ComfyUI
-python main.py --disable-pinned-memory
+python main.py --disable-pinned-memory --use-sage-attention
