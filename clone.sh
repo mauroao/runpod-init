@@ -19,11 +19,17 @@ git clone https://github.com/kijai/ComfyUI-WanVideoWrapper.git comfyui-wanvideow
 git clone https://github.com/kijai/ComfyUI-KJNodes.git comfyui-kjnodes
 git clone https://github.com/DoctorDiffusion/ComfyUI-MediaMixer.git comfyui-mediamixer
 git clone https://github.com/city96/ComfyUI-GGUF ComfyUI-GGUF
+git clone https://github.com/welltop-cn/ComfyUI-TeaCache
 
 mkdir -p /workspace/ComfyUI/user/default/workflows
 for f in /workspace/runpod-init/workflows/*.json; do
     ln -sf "$f" /workspace/ComfyUI/user/default/workflows/
 done
+
+ln -sf /workspace/runpod-init/comfy.settings.json /workspace/ComfyUI/user/default/comfy.settings.json
+
+# temporary fix from https://github.com/welltop-cn/ComfyUI-TeaCache/issues/178
+ln -sf /workspace/runpod-init/nodes.py /workspace/ComfyUI/custom_nodes/ComfyUI-TeaCache/nodes.py
 
 echo "All commands executed successfully."
 exit 0

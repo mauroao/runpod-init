@@ -15,6 +15,7 @@ pip install -r /workspace/ComfyUI/custom_nodes/comfyui-videohelpersuite/requirem
 pip install -r /workspace/ComfyUI/custom_nodes/comfyui-kjnodes/requirements.txt
 pip install -r /workspace/ComfyUI/custom_nodes/comfyui-mediamixer/requirements.txt
 pip install -r /workspace/ComfyUI/custom_nodes/ComfyUI-GGUF/requirements.txt
+pip install -r /workspace/ComfyUI/custom_nodes/ComfyUI-TeaCache/requirements.txt
 
 pip install triton
 pip install sageattention==1.0.6
