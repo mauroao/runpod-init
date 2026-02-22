@@ -22,6 +22,18 @@ download_file() {
     aria2c -x 16 -s 16 -o "$target_path" "$url"
 }
 
+download_file_v2() {
+    local target_path=$1
+    local url=$2
+
+    if [ -f "$target_path" ]; then
+        echo "Skipping: $target_path already exists."
+        return 0
+    fi
+
+    echo "Downloading: $url"
+    wget -O "$target_path" "$url"
+}
 
 download_base_models() {
     # Text Encoders
