@@ -3,7 +3,7 @@
 # Pre-warm Triton: forces compilation of cuda_utils.c BEFORE ComfyUI
 # starts. This way any failure appears at boot, not in the middle of a workflow.
 echo "[startup] Pre-warming Triton CUDA utils..."
-/workspace/ComfyUI/.venv/bin/python -c "
+python3 -c "
 from triton.backends.nvidia.driver import CudaUtils
 CudaUtils()
 print('[startup] Triton pre-warm OK')
