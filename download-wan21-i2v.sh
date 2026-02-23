@@ -12,6 +12,8 @@ download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.
 cd /workspace/ComfyUI/models/loras/
 download_file_v2 "wan_bounceV_01.safetensors" "https://civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_cumshot_i2v.safetensors" "https://civitai.com/api/download/models/1602715?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_cumshot-I2V-22epo-k3nk-f4c3spl4sh.safetensors" "https://civitai.com/api/download/models/1952633?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan_Anime-CumShot-Emotion.safetensors" "https://civitai.com/api/download/models/1934867?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
 # Upscale models
 cd /workspace/ComfyUI/models/upscale_models/
@@ -19,5 +21,3 @@ download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN
 
 echo "All downloads completed successfully."
 exit 0
-
-#
