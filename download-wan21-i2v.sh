@@ -1,4 +1,5 @@
 #!/bin/bash
+"$(dirname "$0")/scripts/install-aria-ffmpeg.sh" || exit 1
 source "$(dirname "$0")/scripts/common.sh"
 
 download_base_models
