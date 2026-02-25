@@ -11,7 +11,7 @@ if $IS_WSL; then
     # Fix for WSL2: ensures Triton finds libcuda directly,
     # without depending on ldconfig (which can have timing issues on WSL2 boot)
     export TRITON_LIBCUDA_PATH=/usr/lib/wsl/lib
-    PYTHON=/workspace/ComfyUI/.venv/bin/python
+    PYTHON=/comfy/ComfyUI/.venv/bin/python
 else
     export AIOHTTP_NO_SENDFILE=1
     PYTHON=python3
@@ -26,7 +26,7 @@ CudaUtils()
 print('[startup] Triton pre-warm OK')
 " || echo "[startup] WARNING: Triton pre-warm failed. SageAttention may not work."
 
-cd /workspace/ComfyUI
+cd /comfy/ComfyUI
 
 if $IS_WSL; then
     python main.py --disable-pinned-memory --use-sage-attention

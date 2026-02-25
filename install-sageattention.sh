@@ -10,7 +10,7 @@ trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "${SCRIPT_DIR}/scripts/sageattention.sh"
 
-VENV_PATH="/workspace/ComfyUI/.venv"
+VENV_PATH="/comfy/ComfyUI/.venv"
 
 # Detect WSL using the WSL_DISTRO_NAME variable (set by WSL on every session)
 if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then

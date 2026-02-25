@@ -37,18 +37,18 @@ download_file_v2() {
 
 download_base_models() {
     # Text Encoders
-    cd /workspace/ComfyUI/models/text_encoders/
+    cd /comfy/ComfyUI/models/text_encoders/
     download_file "umt5_xxl_fp8_e4m3fn_scaled.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true"
 
     # CLIP Vision
-    cd /workspace/ComfyUI/models/clip_vision/
+    cd /comfy/ComfyUI/models/clip_vision/
     download_file "clip_vision_h.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true"
 
     # VAE
-    cd /workspace/ComfyUI/models/vae/
+    cd /comfy/ComfyUI/models/vae/
     download_file "wan_2.1_vae.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true"
 
     # Upscale Models
-    cd /workspace/ComfyUI/models/upscale_models/
+    cd /comfy/ComfyUI/models/upscale_models/
     download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/a86fc6182b4650b4459cb1ddcb0a0d1ec86bf3b0/RealESRGAN_x2.pth?download=true"
 }
