@@ -1,8 +1,10 @@
+TAG = mauroao/runpod-comfy:0.1.1
+
 docker-build:
-	docker build -t mauroao/runpod-comfy:0.1.0 .
+	docker build -t $(TAG) .
 
 docker-push:
-	docker push docker.io/mauroao/runpod-comfy:0.1.0
+	docker push docker.io/$(TAG)
 
 docker-run:
-	docker run --rm -it --gpus all --shm-size=8g mauroao/runpod-comfy:0.1.0 /bin/bash
+	docker run --rm -it --gpus all --shm-size=8g $(TAG) /bin/bash
