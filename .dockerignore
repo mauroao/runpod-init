@@ -1,0 +1,9 @@
+.git/
+.claude/
+.vscode/
+.editorconfig
+.gitignore
+Dockerfile
+README.md
+.venv/
+
