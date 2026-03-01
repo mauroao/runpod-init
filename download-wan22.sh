@@ -16,8 +16,8 @@ download_file_v2 "wan22-f4c3spl4sh-154epoc-low-k3nk.safetensors" "https://civita
 download_file_v2 "wan22-DR34MJOB_I2V_14b_LowNoise.safetensors" "https://civitai.com/api/download/models/2235288?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan22-DR34MJOB_I2V_14b_HighNoise.safetensors" "https://civitai.com/api/download/models/2235299?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
-download_file_v2 "23high20noiseCumshot.oFnW.safetensors" "https://civitai.com/api/download/models/2116008?type=Model&format=SafeTensor&token=${RP_TOKEN}"
-download_file_v2 "56low20noiseCumshot.xb7F.safetensors" "https://civitai.com/api/download/models/2116027?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan22_23high20noiseCumshot.oFnW.safetensors" "https://civitai.com/api/download/models/2116008?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan22_56low20noiseCumshot.xb7F.safetensors" "https://civitai.com/api/download/models/2116027?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
 download_file "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors"
 download_file "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors"
