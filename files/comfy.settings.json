@@ -4,8 +4,7 @@
     "Comfy.RightSidePanel.IsOpen": false,
     "Comfy.Templates.SortBy": "default",
     "Comfy.Templates.SelectedModels": [
-        "Wan2.1",
-        "Wan2.2"
+        "Wan2.1"
     ],
     "Comfy.Templates.SelectedRunsOn": [
         "ComfyUI"
