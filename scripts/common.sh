@@ -4,7 +4,7 @@ set -euo pipefail
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
 # Check if the RP_TOKEN variable is set and not empty
-if [ -z "$RP_TOKEN" ]; then
+if [ -z "${RP_TOKEN:-}" ]; then
     echo "Error: RP_TOKEN is not set. Aborting."
     exit 1
 fi
@@ -18,7 +18,7 @@ download_file() {
         return 0
     fi
 
-    echo "Downloading: $url"
+    echo "Downloading: $target_path"
     aria2c -x 16 -s 16 -o "$target_path" "$url"
 }
 
@@ -31,8 +31,26 @@ download_file_v2() {
         return 0
     fi
 
-    echo "Downloading: $url"
+    echo "Downloading: $target_path"
     wget -O "$target_path" "$url"
+}
+
+download_file_hf_private() {
+    local target_path=$1
+    local url=$2
+
+    if [ -f "$target_path" ]; then
+        echo "Skipping: $target_path already exists."
+        return 0
+    fi
+
+    if [ -z "${HF_TOKEN:-}" ]; then
+        echo "Error: HF_TOKEN is not set. Cannot download private HuggingFace file: $target_path"
+        exit 1
+    fi
+
+    echo "Downloading (private HF): $target_path"
+    wget --header "Authorization: Bearer ${HF_TOKEN}" -O "$target_path" "$url"
 }
 
 download_base_models() {

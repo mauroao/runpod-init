@@ -22,6 +22,9 @@ download_file_v2 "wan_cumshot_i2v.safetensors" "https://civitai.com/api/download
 download_file_v2 "wan_cumshot-I2V-22epo-k3nk-f4c3spl4sh.safetensors" "https://civitai.com/api/download/models/1952633?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan_Anime-CumShot-Emotion.safetensors" "https://civitai.com/api/download/models/1934867?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
+# Private HuggingFace LoRAs (require HF_TOKEN):
+download_file_hf_private "wan_s3xyv3n3r4-000022.safetensors" "https://huggingface.co/mauroao/lora_wan_2.1_t2v_s3xyv3n3r4/resolve/main/s3xyv3n3r4-000022.safetensors"
+
 # Upscale models
 cd /comfy/ComfyUI/models/upscale_models/
 download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/a86fc6182b4650b4459cb1ddcb0a0d1ec86bf3b0/RealESRGAN_x2.pth?download=true"
