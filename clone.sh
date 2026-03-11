@@ -23,6 +23,7 @@ git clone https://github.com/DoctorDiffusion/ComfyUI-MediaMixer.git comfyui-medi
 git clone https://github.com/city96/ComfyUI-GGUF ComfyUI-GGUF
 git clone https://github.com/welltop-cn/ComfyUI-TeaCache
 git clone https://github.com/yolain/ComfyUI-Easy-Use
+git clone https://github.com/rgthree/rgthree-comfy.git
 #git clone https://github.com/wallish77/wlsh_nodes
 
 mkdir -p /comfy/ComfyUI/user/default/workflows

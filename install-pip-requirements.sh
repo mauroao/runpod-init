@@ -17,6 +17,8 @@ pip install -r /comfy/ComfyUI/custom_nodes/comfyui-mediamixer/requirements.txt
 pip install -r /comfy/ComfyUI/custom_nodes/ComfyUI-GGUF/requirements.txt
 pip install -r /comfy/ComfyUI/custom_nodes/ComfyUI-TeaCache/requirements.txt
 pip install -r /comfy/ComfyUI/custom_nodes/ComfyUI-Easy-Use/requirements.txt
+pip install -r /comfy/ComfyUI/custom_nodes/rgthree-comfy/requirements.txt
+
 #pip install -r /comfy/ComfyUI/custom_nodes/wlsh_nodes/requirements.txt
 
 pip install triton
