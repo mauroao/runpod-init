@@ -13,4 +13,6 @@ RUN ./install-pip-requirements.sh
 
 COPY workflows/ ./workflows/
 
+RUN ./link-workflows.sh
+
 
