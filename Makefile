@@ -1,4 +1,4 @@
-TAG = mauroao/runpod-comfy:0.1.6
+TAG = mauroao/runpod-comfy:0.1.7
 
 docker-build:
 	docker build -t $(TAG) .
