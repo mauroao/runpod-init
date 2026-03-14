@@ -23,8 +23,10 @@ pip install -r "$COMFY_FOLDER"/ComfyUI/custom_nodes/rgthree-comfy/requirements.t
 
 #pip install -r "$COMFY_FOLDER"/ComfyUI/custom_nodes/wlsh_nodes/requirements.txt
 
-pip install triton
-pip install ninja packaging
+if [[ "$(uname -s)" != "Darwin" ]]; then
+    pip install triton
+    pip install ninja packaging
+fi
 # pip install sageattention==1.0.6
 # pip install "https://huggingface.co/Kijai/PrecompiledWheels/resolve/main/sageattention-2.2.0-cp312-cp312-linux_x86_64.whl"
 
