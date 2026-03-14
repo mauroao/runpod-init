@@ -2,6 +2,13 @@
 
 COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
 
+# Detect macOS
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    cd "$COMFY_FOLDER"/ComfyUI
+    .venv/bin/python main.py
+    exit $?
+fi
+
 # Detect environment via WSL_DISTRO_NAME (set by WSL on every session)
 if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then
     IS_WSL=true

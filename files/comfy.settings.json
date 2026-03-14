@@ -214,5 +214,7 @@
                 }
             }
         }
-    }
+    },
+    "Comfy.InstalledVersion": "1.41.19",
+    "Comfy.TutorialCompleted": true
 }
