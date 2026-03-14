@@ -1,5 +1,7 @@
 #!/bin/bash
 
+COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
+
 # Detect environment via WSL_DISTRO_NAME (set by WSL on every session)
 if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then
     IS_WSL=true
@@ -11,7 +13,7 @@ if $IS_WSL; then
     # Fix for WSL2: ensures Triton finds libcuda directly,
     # without depending on ldconfig (which can have timing issues on WSL2 boot)
     export TRITON_LIBCUDA_PATH=/usr/lib/wsl/lib
-    PYTHON=/comfy/ComfyUI/.venv/bin/python
+    PYTHON="$COMFY_FOLDER"/ComfyUI/.venv/bin/python
 else
     export AIOHTTP_NO_SENDFILE=1
     PYTHON=python3
@@ -26,7 +28,7 @@ CudaUtils()
 print('[startup] Triton pre-warm OK')
 " || echo "[startup] WARNING: Triton pre-warm failed. SageAttention may not work."
 
-cd /comfy/ComfyUI
+cd "$COMFY_FOLDER"/ComfyUI
 
 if $IS_WSL; then
     python main.py --disable-pinned-memory --use-sage-attention

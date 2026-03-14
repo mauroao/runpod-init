@@ -3,6 +3,8 @@ set -euo pipefail
 
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
+COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
+
 # NOTE: To keep the venv active in your current shell after this script,
 # run it with: source create_venv.sh
 
@@ -12,15 +14,15 @@ if type deactivate &>/dev/null; then
 fi
 
 # 2. Remove existing venv if present, then create and activate
-if [ -d /comfy/ComfyUI/.venv ]; then
-    rm -rf /comfy/ComfyUI/.venv
+if [ -d "$COMFY_FOLDER"/ComfyUI/.venv ]; then
+    rm -rf "$COMFY_FOLDER"/ComfyUI/.venv
 fi
-python3 -m venv /comfy/ComfyUI/.venv
-source /comfy/ComfyUI/.venv/bin/activate
+python3 -m venv "$COMFY_FOLDER"/ComfyUI/.venv
+source "$COMFY_FOLDER"/ComfyUI/.venv/bin/activate
 
 # 3. Upgrade pip
 python -m pip install --upgrade pip
 
 echo "All commands executed successfully."
-echo "venv location: /comfy/ComfyUI/.venv"
+echo "venv location: "$COMFY_FOLDER"/ComfyUI/.venv"
 exit 0

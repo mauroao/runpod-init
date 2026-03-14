@@ -2,15 +2,17 @@
 "$(dirname "$0")/scripts/install-aria-ffmpeg.sh" || exit 1
 source "$(dirname "$0")/scripts/common.sh"
 
+COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
+
 download_base_models
 
 # Diffusion Model
-cd /comfy/ComfyUI/models/diffusion_models/
+cd "$COMFY_FOLDER"/ComfyUI/models/diffusion_models/
 download_file "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors" "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true"
 download_file "wan2.1_t2v_14B_fp8_e4m3fn.safetensors" "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_14B_fp8_e4m3fn.safetensors?download=true"
 
 # LoRAs
-cd /comfy/ComfyUI/models/loras/
+cd "$COMFY_FOLDER"/ComfyUI/models/loras/
 
 # from https://civitai.com/user/ai_build_art:
 download_file_v2 "wan_bounceV_01-i2v.safetensors" "https://civitai.com/api/download/models/1517164?type=Model&format=SafeTensor&token=${RP_TOKEN}"
@@ -26,7 +28,7 @@ download_file_v2 "wan_Anime-CumShot-Emotion.safetensors" "https://civitai.com/ap
 download_file_hf_private "wan_s3xyv3n3r4-000022.safetensors" "https://huggingface.co/mauroao/lora_wan_2.1_t2v_s3xyv3n3r4/resolve/main/s3xyv3n3r4-000022.safetensors"
 
 # Upscale models
-cd /comfy/ComfyUI/models/upscale_models/
+cd "$COMFY_FOLDER"/ComfyUI/models/upscale_models/
 download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/a86fc6182b4650b4459cb1ddcb0a0d1ec86bf3b0/RealESRGAN_x2.pth?download=true"
 
 echo "All downloads completed successfully."
