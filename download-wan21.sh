@@ -31,5 +31,5 @@ download_file_hf_private "wan_s3xyv3n3r4-000022.safetensors" "https://huggingfac
 cd "$COMFY_FOLDER"/ComfyUI/models/upscale_models/
 download_file "RealESRGAN_x2.pth" "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/a86fc6182b4650b4459cb1ddcb0a0d1ec86bf3b0/RealESRGAN_x2.pth?download=true"
 
-echo "All downloads completed successfully."
+echo -e "${GREEN}All downloads completed successfully.${NC}"
 exit 0

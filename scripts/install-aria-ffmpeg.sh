@@ -3,6 +3,9 @@ set -euo pipefail
 
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 SUDO=""
 if command -v sudo &>/dev/null; then
     SUDO="sudo"
@@ -34,5 +37,5 @@ if ! command -v ffmpeg &>/dev/null; then
     $SUDO apt install -y ffmpeg
 fi
 
-echo "All commands executed successfully."
+echo -e "${GREEN}All commands executed successfully.${NC}"
 exit 0

@@ -3,6 +3,9 @@ set -euo pipefail
 
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
 
@@ -43,5 +46,5 @@ if [ ! -f "$FILE" ]; then
     wget -O "$FILE" https://huggingface.co/jasonot/mycomfyui/resolve/main/rife47.pth
 fi
 
-echo "All commands executed successfully."
+echo -e "${GREEN}All commands executed successfully.${NC}"
 exit 0

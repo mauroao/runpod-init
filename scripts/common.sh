@@ -4,6 +4,8 @@ set -euo pipefail
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
 COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
+GREEN='\033[0;32m'
+NC='\033[0m'
 
 # Check if the RP_TOKEN variable is set and not empty
 if [ -z "${RP_TOKEN:-}" ]; then

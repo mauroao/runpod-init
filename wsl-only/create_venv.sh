@@ -3,6 +3,9 @@ set -euo pipefail
 
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
 
 # NOTE: To keep the venv active in your current shell after this script,
@@ -23,6 +26,6 @@ source "$COMFY_FOLDER"/ComfyUI/.venv/bin/activate
 # 3. Upgrade pip
 python -m pip install --upgrade pip
 
-echo "All commands executed successfully."
+echo -e "${GREEN}All commands executed successfully.${NC}"
 echo "venv location: "$COMFY_FOLDER"/ComfyUI/.venv"
 exit 0

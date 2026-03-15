@@ -3,6 +3,9 @@ set -euo pipefail
 
 trap 'echo "ERROR: Command failed at line $LINENO with exit code $?" >&2; exit 1' ERR
 
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
 
 cd "$COMFY_FOLDER"/ComfyUI
@@ -30,5 +33,5 @@ fi
 # pip install sageattention==1.0.6
 # pip install "https://huggingface.co/Kijai/PrecompiledWheels/resolve/main/sageattention-2.2.0-cp312-cp312-linux_x86_64.whl"
 
-echo "All commands executed successfully."
+echo -e "${GREEN}All commands executed successfully.${NC}"
 exit 0
