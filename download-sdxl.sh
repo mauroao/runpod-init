@@ -11,6 +11,6 @@ download_file_v2 "juggernautXL_ragnarokBy.safetensors" "https://civitai.com/api/
 # Private HuggingFace LoRA (requires HF_TOKEN)
 cd "$COMFY_FOLDER"/ComfyUI/models/loras/
 download_file_hf_private "s3xyv3n3r4_sdxl_v1-000008.safetensors" "https://huggingface.co/mauroao/lora_sdxl_s3xyv3n3r4/resolve/main/s3xyv3n3r4_sdxl_v1-000008.safetensors"
-
+download_file "sdxl_lightning_8step_lora.safetensors" "https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_8step_lora.safetensors"
 echo "All downloads completed successfully."
 exit 0
