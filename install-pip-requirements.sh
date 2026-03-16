@@ -26,6 +26,8 @@ pip install -r "$COMFY_FOLDER"/ComfyUI/custom_nodes/rgthree-comfy/requirements.t
 
 #pip install -r "$COMFY_FOLDER"/ComfyUI/custom_nodes/wlsh_nodes/requirements.txt
 
+pip install --upgrade requests
+
 if [[ "$(uname -s)" != "Darwin" ]]; then
     pip install triton
     pip install ninja packaging
