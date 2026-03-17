@@ -13,6 +13,7 @@ cd "$COMFY_FOLDER"/ComfyUI/models/loras/
 
 # Private HuggingFace LoRA (requires HF_TOKEN)
 download_file_hf_private "s3xyv3n3r4_sdxl_v1-000008.safetensors" "https://huggingface.co/mauroao/lora_sdxl_s3xyv3n3r4/resolve/main/s3xyv3n3r4_sdxl_v1-000008.safetensors"
+download_file_hf_private "sdxl_putr1c1nt4-000010.safetensors" "https://huggingface.co/mauroao/lora_sdxl_putr1c1nt4/resolve/main/model/sdxl_putr1c1nt4-000010.safetensors"
 
 download_file "sdxl_lightning_8step_lora.safetensors" "https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_8step_lora.safetensors"
 
