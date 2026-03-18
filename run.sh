@@ -4,7 +4,7 @@ COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
 
 if [[ "$(uname)" == "Darwin" ]]; then
     cd "$COMFY_FOLDER"/ComfyUI
-    python main.py
+    python main.py --listen
     exit 0
 fi
 
