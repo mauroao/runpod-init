@@ -6,4 +6,5 @@
 Dockerfile
 README.md
 .venv/
-
+.dockerignore
+Makefile
