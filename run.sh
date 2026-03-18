@@ -2,6 +2,12 @@
 
 COMFY_FOLDER="${COMFY_FOLDER:-/comfy}"
 
+if [[ "$(uname)" == "Darwin" ]]; then
+    cd "$COMFY_FOLDER"/ComfyUI
+    python main.py
+    exit 0
+fi
+
 # Detect environment via WSL_DISTRO_NAME (set by WSL on every session)
 if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then
     IS_WSL=true
