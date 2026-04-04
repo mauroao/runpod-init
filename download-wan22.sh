@@ -9,6 +9,9 @@ download_base_models
 # LoRAs
 cd "$COMFY_FOLDER"/ComfyUI/models/loras/
 
+download_file_v2 "wan22-bounce_test_HighNoise-000005.safetensors" "https://civitai.com/api/download/models/2209354?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+download_file_v2 "wan22-bounce_test_LowNoise-000005.safetensors" "https://civitai.com/api/download/models/2209344?type=Model&format=SafeTensor&token=${RP_TOKEN}"
+
 download_file_v2 "wan22-m4crom4sti4-i2v-20epoc-high-k3nk.safetensors" "https://civitai.com/api/download/models/2265575?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 download_file_v2 "wan22-m4crom4sti4-i2v-20epoc-low-k3nk.safetensors" "https://civitai.com/api/download/models/2266727?type=Model&format=SafeTensor&token=${RP_TOKEN}"
 
