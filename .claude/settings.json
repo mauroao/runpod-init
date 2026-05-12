@@ -1,5 +1,8 @@
 {
   "permissions": {
+    "additionalDirectories": [
+      "/comfy"
+    ],
     "allow": [
       "WebFetch",
       "WebSearch",
